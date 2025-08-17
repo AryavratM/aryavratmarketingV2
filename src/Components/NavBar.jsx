@@ -4,7 +4,7 @@ import logo from "/assets/logos/logo.svg";
 import { Link, useLocation } from "react-router-dom";
 import { GoDownload } from "react-icons/go";
 import { FiMenu, FiX } from "react-icons/fi"; // Hamburger & close icons
-import portfolio from "/assets/Aryavrat Marketing Brochure.pdf";
+import portfolio from "/assets/Aryavrat-Marketing-Brochure.pdf";
 
 function NavBar() {
   const [scrolled, setScrolled] = useState(false);
@@ -32,19 +32,24 @@ function NavBar() {
           menuOpen ? styles.activeMenu : ""
         }`}>
         {menuOpen ? (
-          <a
-          href={portfolio}
-         download="Aryavrat-Marketing-Brochure.pdf"
-          target="_blank"
-          rel="noopener noreferrer">
-          Brochure Download<GoDownload className={styles.portfolioDownloadbutton} />
-        </a>
-
-        
+          <>
+            <a href={portfolio} target="_blank" rel="noopener noreferrer">
+              Brochure Preview
+            </a>
+            <a
+              href={portfolio}
+              download="Aryavrat-Marketing-Brochure.pdf"
+              target="_blank"
+              rel="noopener noreferrer">
+              Brochure Download
+              <GoDownload className={styles.portfolioDownloadbutton} />
+            </a>
+          </>
         ) : (
           <a href={portfolio} target="_blank" rel="noopener noreferrer">
-            Brochure <GoDownload className={styles.portfolioDownloadbutton} />
-          </a>  
+            Brochure Preview
+            <GoDownload className={styles.portfolioDownloadbutton} />
+          </a>
         )}
 
         <Link

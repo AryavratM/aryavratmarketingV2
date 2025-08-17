@@ -10,7 +10,7 @@ import { TiLocation } from "react-icons/ti";
 import { IoMdCall } from "react-icons/io";
 import { CiMail } from "react-icons/ci";
 import { GoDownload } from "react-icons/go";
-import portfolio from "/assets/Aryavrat Marketing Brochure.pdf";
+import portfolio from "/assets/Aryavrat-Marketing-Brochure.pdf";
 function Footer() {
   return (
     <footer>
@@ -56,22 +56,19 @@ function Footer() {
           </Link>
 
           <a
-    href={portfolio}
-    target="_blank"
-    rel="noopener noreferrer"
-    className={`${styles.link} ${styles.desktopOnly}`}
-  >
-    Preview Brochure 
-  </a>
+            href={portfolio}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`${styles.link} ${styles.desktopOnly}`}>
+            Preview Brochure
+          </a>
 
- 
-  <a
-    href={portfolio}
-    download="Aryavrat-Marketing-Brochure.pdf"
-    className={`${styles.link} ${styles.mobileOnly}`}
-  >
-    Download Brochure <GoDownload className={styles.link} />
-  </a>
+          <a
+            href={portfolio}
+            download="Aryavrat-Marketing-Brochure.pdf"
+            className={`${styles.link} ${styles.mobileOnly}`}>
+            Download Brochure <GoDownload className={styles.link} />
+          </a>
 
           <Link to={"/clients"} className={styles.link}>
             Clients
