@@ -11,10 +11,9 @@ function Clients() {
   return (
     <>
       <PageHeading
-        contentOne={`From standout campaigns to kind words from clients,  visible moves across Goa.`}
-        contentTwo={`here’s a glimpse into how brands 
-        have partnered with Aryavrat Marketing to make bold,`}
-        contentThree={`Because when visibility matters—results follow.`}
+        contentOne={`From standout campaigns to kind words from clients, visibility moves across Goa.`}
+        contentTwo={`Here’s a glimpse into brands that have partnered with Aryavrat Marketing to make bold moves`}
+        contentThree={`Because when visibility matters, results follow.`}
         title={"Client Stories"}></PageHeading>
       <section className={styles.clientsSection}>
         <div className={styles.brandsThatTrustUsContainer}>
@@ -27,7 +26,9 @@ function Clients() {
             visibility that works.
           </p>
           <p>
-          Our hoardings have launched campaigns, built trust, and created buzz across Goa. Here's a glimpse of who has been up there and a look forward to your brand joining the list.
+            Our hoardings have launched campaigns, built trust, and created buzz
+            across Goa. Here's a glimpse of who has been up there and a look
+            forward to your brand joining the list.
           </p>
 
           <div className={styles.clientsContainer}>
@@ -39,7 +40,9 @@ function Clients() {
         </div>
 
         <div className={styles.campaignsContainer}>
-          <h2>Discover our <span>successful advertising</span> campaigns</h2>
+          <h2>
+            Discover our <span>successful advertising</span> campaigns
+          </h2>
 
           <div className={styles.cardsContainer}>
             {campaigns.map((c, index) => (
@@ -49,7 +52,6 @@ function Clients() {
                 imgSrc={c.img}
                 location={c.location}
                 size={c.size}
-
                 key={`${index}${c.position}`}></Campaign>
             ))}
           </div>
