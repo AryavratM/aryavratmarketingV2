@@ -1,0 +1,166 @@
+.homeLandingContainer {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(0, 0, 0);
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.homeLandingContainer video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+  position: relative;
+  opacity: 0.3;
+}
+
+.homeLandingContentContainer {
+  position: absolute;
+  z-index: 4;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0);
+}
+.landingContent {
+  width: 40%;
+  z-index: 2;
+  color: white;
+}
+
+.landingContent h4 {
+  font-family: var(--heading-font);
+  font-size: 3rem;
+}
+
+.landingContent p {
+  font-family: var(--subheading-font);
+  font-size: 1.4rem;
+  margin: 1rem 0rem;
+}
+
+.homeLandingContentContainer img {
+  width: 40%;
+  height: 70%;
+  object-fit: contain;
+}
+
+.callToActionContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5rem;
+  margin-top: 2rem;
+}
+
+.callToActionContainer a {
+  text-decoration: none;
+  color: white;
+  background-color: var(--primary-color);
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 20px;
+  font-weight: 600;
+  transition: 0.5s;
+  border: 2px solid var(--primary-color);
+  width: 200px;
+  text-align: center;
+}
+.callToActionContainer a:hover {
+  transition: 0.5s;
+  border: 2px solid var(--primary-color);
+  background-color: transparent;
+}
+
+.callToActionContainer a:nth-child(2) {
+  background-color: white;
+  
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: 0.5s;
+  border: 2px solid white;
+}
+.callToActionContainer a:nth-child(2):hover {
+  background-color: transparent;
+  color: white;
+  transition: 0.5s;
+}
+
+.whatsappIcon {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 1300px) {
+  .landingContent {
+    width: 45%;
+  }
+  .homeLandingContentContainer img {
+    width: 45%;
+  }
+}
+@media (max-width: 1000px) {
+  .homeLandingContentContainer {
+    flex-direction: column-reverse;
+  }
+  .landingContent {
+    width: 90%;
+
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .landingContent h4 {
+    text-align: center;
+  }
+
+  .landingContent p {
+    text-align: center;
+  }
+
+  .homeLandingContentContainer img {
+    height: 40%;
+    object-fit: contain;
+  }
+
+  .callToActionContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .callToActionContainer {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .callToActionContainer a {
+    padding: 1rem;
+
+    width: max-content;
+    min-width: 100px;
+    text-align: center;
+  }
+
+  .homeLandingContentContainer img {
+    height: 40%;
+    width: 90%;
+    object-fit: contain;
+  }
+}

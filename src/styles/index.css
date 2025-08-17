@@ -1,0 +1,98 @@
+:root {
+  --primary-color: rgb(173, 42, 48);
+  --secondary-color: rgb(33, 33, 33);
+  --heading-font: "Inter", sans-serif;
+  --subheading-font: "Poppins", sans-serif;
+  --body-font: "Nunito", sans-serif;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  font-size: 12px;
+  overflow-x: hidden;
+  background-color: black;
+  height: 60vh;
+  scroll-behavior: smooth;
+}
+
+
+body {
+  height: 50vh;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--secondary-color);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 5px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #a03030;
+}
+
+.bgVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  object-fit: contain;
+  opacity: 0.5;
+  z-index: -2;
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 10px; 
+  }
+  
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  html {
+    font-size: 11px; 
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  html {
+    font-size: 11.5px;
+  }
+}
+
+
+
+
+@media (min-width: 1440px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 1920px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+}

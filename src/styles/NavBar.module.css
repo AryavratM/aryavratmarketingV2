@@ -1,0 +1,172 @@
+/* Existing styles kept as-is */
+nav {
+  background-color: black;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 1rem 0rem;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  height: 100px;
+}
+
+.navLogoContainer {
+  width: 20%;
+}
+
+.navLogoContainer img {
+  width: 200px;
+}
+
+.navLinksContainer {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2rem;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.link,
+a {
+  font-family: var(--heading-font);
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  transition: 0.5s;
+}
+
+.link:hover {
+  color: var(--primary-color);
+}
+
+nav a:hover {
+  color: var(--primary-color);
+}
+
+.portfolioDownloadbutton {
+  font-size: 1.3rem;
+}
+
+.contactUsButton {
+  background-color: var(--primary-color);
+  border-radius: 40px;
+  padding: 1rem 2rem;
+  margin-left: 4rem;
+  width: max-content;
+}
+
+.contactUsButton:hover {
+  background-color: white;
+  color: black;
+}
+
+.scrolled {
+  background-color: rgba(0, 0, 0, 0.583);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.activeLink {
+  color: var(--primary-color);
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  color: white;
+  font-size: 2rem;
+  margin-left: auto;
+}
+
+@media (max-width: 1100px) {
+  .navLogoContainer {
+    width: 30%;
+  }
+
+  .navLogoContainer img {
+    width: 200px;
+  }
+
+  .navLinksContainer {
+    width: 60%;
+  }
+
+  .contactUsButton {
+    margin-left: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 0;
+    margin: 0;
+    height: 70px;
+  }
+
+  .navLogoContainer {
+    width: auto;
+    padding: 0;
+    margin: 0;
+  }
+
+  .navLinksContainer {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background-color: black;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    max-height: 0;
+    overflow: hidden;
+    width: 100vw;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+  }
+
+  .navLogoContainer {
+    width: 50%;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navLogoContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 5px;
+  }
+
+  .activeMenu {
+    max-height: 500px;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .hamburger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+  }
+
+  .contactUsButton {
+    margin-left: 0;
+  }
+}

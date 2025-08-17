@@ -1,0 +1,388 @@
+.sitesSection {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 10px;
+  margin-top: 5rem;
+}
+
+.tabButton {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  background-color: #ffffff;
+  color: black;
+  border-radius: 10px;
+  transition: 0.3s;
+  font-family: var(--heading-font);
+  font-size: 1.2rem;
+}
+
+.tabButton.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.locationHeading {
+  color: white;
+  text-transform: capitalize;
+  font-family: var(--heading-font);
+  margin: 2rem 0;
+  font-size: 2rem;
+}
+
+.locationsubHeading {
+  font-family: var(--subheading-font);
+  color: white;
+  font-size: 1.2rem;
+  width: max-content;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+.locationsubHeading::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  left: 0;
+}
+.siteList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.siteImage {
+  width: 100%;
+  max-width: 300px;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
+.popUpOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.popUpContainer {
+  background-color: var(--secondary-color);
+  width: 90vw;
+  max-width: 1400px;
+  height: 85vh;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow-y: auto;
+  padding: 34px;
+  animation: slideUp 0.3s ease;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.popUpContainer::-webkit-scrollbar {
+  width: 0px;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.popUpHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.closePopUpIcon {
+  font-size: 3rem;
+  color: rgb(255, 255, 255);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.5s;
+
+  margin: 0;
+  height: 100%;
+}
+
+.closePopUpIcon:hover {
+  color: var(--primary-color);
+  transition: 0.5s;
+}
+
+.popUpHeader h2 {
+  color: white;
+  font-family: var(--heading-font);
+  font-size: 2.4rem;
+
+  margin: 0;
+}
+
+.sitesMainContainer {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2rem;
+}
+
+.sitesListContainer {
+  width: 50%;
+}
+
+.sitesListContainer h4 {
+  font-family: var(--subheading-font);
+  color: white;
+  text-transform: capitalize;
+  font-size: 1.4rem;
+}
+.sitesListContainer h3 {
+  font-family: var(--subheading-font);
+  color: white;
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+}
+
+.siteNameButton {
+  position: relative;
+  cursor: pointer;
+
+  border-radius: 6px;
+  width: max-content;
+  transition: 0.2s;
+  font-weight: 500;
+  padding: 1rem;
+  padding-left: 0rem;
+  font-size: 1.2rem;
+}
+
+.siteNameButton::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 2px;
+  width: 100%;
+  background-color: var(--primary-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.siteNameButton:hover {
+  color: var(--primary-color);
+}
+.siteNameButton:hover::after {
+  transform: scaleX(1);
+}
+
+.sitesDetailContainer {
+  width: 50%;
+  padding: 0 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+}
+
+.slider {
+  width: 100%;
+  height: 350px;
+  margin-bottom: 2rem;
+}
+
+.slider div {
+  height: 100%;
+  width: 100%;
+}
+
+.slider div img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20px;
+}
+
+.sitesDetailContainer p {
+  font-family: var(--subheading-font);
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.selectedSiteContentContainer {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sitesDetailContainer p .siteIcon {
+  color: var(--primary-color);
+  font-size: 20px;
+  width: 20px;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: center;
+
+  gap: 2rem;
+}
+
+.btnContainer a {
+  background-color: white;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  color: black;
+  font-family: var(--subheading-font);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 2px solid white;
+  transition: 0.5s;
+}
+
+.btnContainer a:hover {
+  background-color: transparent;
+  color: white;
+}
+
+.btnContainer a .siteIcon {
+  color: var(--primary-color);
+  font-size: 2rem;
+}
+
+.btnContainer a:nth-child(2) {
+  background-color: var(--primary-color);
+  color: white;
+  border: 2px solid var(--primary-color);
+}
+
+.btnContainer a:nth-child(2) .siteIcon {
+  color: white;
+}
+
+.btnContainer a:nth-child(2):hover {
+  background-color: transparent;
+  color: white;
+}
+
+.noImgMsg {
+  width: 100%;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: var(--heading-font);
+}
+
+@media (max-width: 1300px) {
+  .sitesSection {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .slider {
+    height: 250px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .siteList {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 1000px) {
+  .siteList {
+    grid-template-columns: 1fr 1fr;
+  }
+  .sitesMainContainer {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .sitesListContainer {
+    width: 100%;
+  }
+
+  .sitesDetailContainer {
+    width: 100%;
+  }
+
+  .slider {
+    height: 350px;
+  }
+
+  .popUpHeader h2 {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .slider {
+    height: 250px;
+  }
+
+  .popUpHeader {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2rem;
+  }
+
+  .popUpContainer h2 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .popUpContainer {
+    padding: 2rem;
+  }
+
+  .btnContainer {
+    margin-top: 2rem;
+  }
+
+  .siteList {
+    grid-template-columns: 1fr;
+  }
+  .locationHeading {
+   text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .slider {
+    height: 150px;
+  }
+}
