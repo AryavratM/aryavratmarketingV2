@@ -10,7 +10,7 @@ import { TiLocation } from "react-icons/ti";
 import { IoMdCall } from "react-icons/io";
 import { CiMail } from "react-icons/ci";
 import { GoDownload } from "react-icons/go";
-import portfolio from "/assets/Aryavrat-Marketing-Brochure.pdf";
+import portfolio from "/assets/AryavratMarketingBrochure.pdf";
 function Footer() {
   return (
     <footer>

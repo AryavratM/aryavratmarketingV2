@@ -3,8 +3,8 @@ import styles from "../styles/NavBar.module.css";
 import logo from "/assets/logos/logo.svg";
 import { Link, useLocation } from "react-router-dom";
 import { GoDownload } from "react-icons/go";
-import { FiMenu, FiX } from "react-icons/fi"; // Hamburger & close icons
-import portfolio from "/assets/Aryavrat-Marketing-Brochure.pdf";
+import { FiMenu, FiX } from "react-icons/fi"; 
+import portfolio from "/assets/AryavratMarketingBrochure.pdf";
 
 function NavBar() {
   const [scrolled, setScrolled] = useState(false);
